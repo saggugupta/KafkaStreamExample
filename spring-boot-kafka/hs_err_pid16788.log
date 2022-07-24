@@ -1,0 +1,194 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 260046848 bytes for Failed to commit area from 0x0000000709a00000 to 0x0000000719200000 of length 260046848.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/cygwin64/tmp/ojdkbuild/lookaside/java-11-openjdk/src/hotspot/os/windows/os_windows.cpp:3291), pid=16788, tid=18324
+#
+# JRE version:  (11.0.5+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.5+10-LTS, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=windows-1252 -Duser.country=IN -Duser.language=en -Duser.variant com.demo.kafka.springbootkafka.processor.KafkaStreamProcessor
+
+Host: 11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1806)
+Time: Sun Jul 24 15:12:10 2022 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000226f3dc1000):  JavaThread "Unknown thread" [_thread_in_vm, id=18324, stack(0x00000049e0600000,0x00000049e0700000)]
+
+Stack: [0x00000049e0600000,0x00000049e0700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5e14da]
+V  [jvm.dll+0x773fde]
+V  [jvm.dll+0x77566b]
+V  [jvm.dll+0x775d33]
+V  [jvm.dll+0x241858]
+V  [jvm.dll+0x5de97a]
+V  [jvm.dll+0x5d3565]
+V  [jvm.dll+0x2f79cc]
+V  [jvm.dll+0x2f7852]
+V  [jvm.dll+0x2fc506]
+V  [jvm.dll+0x33dbef]
+V  [jvm.dll+0x33d620]
+V  [jvm.dll+0x2d4ca8]
+V  [jvm.dll+0x2d5df6]
+V  [jvm.dll+0x74f957]
+V  [jvm.dll+0x7510df]
+V  [jvm.dll+0x34aab9]
+V  [jvm.dll+0x733da0]
+V  [jvm.dll+0x3b23af]
+V  [jvm.dll+0x3b4901]
+C  [jli.dll+0x2f03]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000226f1b315b0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000226f3dd9800 GCTaskThread "GC Thread#0" [stack: 0x00000049e0700000,0x00000049e0800000] [id=2504]
+  0x00000226f3e33800 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000049e0800000,0x00000049e0900000] [id=2532]
+  0x00000226f3e35000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000049e0900000,0x00000049e0a00000] [id=21600]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdd50b42f7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000226f3dbec40] Heap_lock - owner thread: 0x00000226f3dc1000
+
+Heap address: 0x0000000709a00000, size: 3942 MB, Compressed Oops mode: Non-zero based: 0x0000000709a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff709f30000 - 0x00007ff709f92000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\java.exe
+0x00007ffe2b470000 - 0x00007ffe2b668000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffe297d0000 - 0x00007ffe2988d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffe29060000 - 0x00007ffe2932e000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffe28e00000 - 0x00007ffe28f00000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffe1e5e0000 - 0x00007ffe1e5f8000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\jli.dll
+0x00007ffe21450000 - 0x00007ffe21465000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\VCRUNTIME140.dll
+0x00007ffe11400000 - 0x00007ffe1169a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffe294d0000 - 0x00007ffe29670000 	C:\Windows\System32\USER32.dll
+0x00007ffe299f0000 - 0x00007ffe29a8e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffe28dd0000 - 0x00007ffe28df2000 	C:\Windows\System32\win32u.dll
+0x00007ffe2a1e0000 - 0x00007ffe2a20a000 	C:\Windows\System32\GDI32.dll
+0x00007ffe29330000 - 0x00007ffe2943b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffe28fc0000 - 0x00007ffe2905d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffe2abe0000 - 0x00007ffe2ac10000 	C:\Windows\System32\IMM32.DLL
+0x00007ffdffe90000 - 0x00007ffdfff2b000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\msvcp140.dll
+0x00007ffdd4dd0000 - 0x00007ffdd5911000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\server\jvm.dll
+0x00007ffe29940000 - 0x00007ffe299ee000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffe296d0000 - 0x00007ffe2976c000 	C:\Windows\System32\sechost.dll
+0x00007ffe2aee0000 - 0x00007ffe2b005000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffe2ac10000 - 0x00007ffe2ac18000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffe09550000 - 0x00007ffe09559000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffe1fad0000 - 0x00007ffe1fada000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffe05070000 - 0x00007ffe05097000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe2a6e0000 - 0x00007ffe2a74b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffe27310000 - 0x00007ffe27322000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffe25ca0000 - 0x00007ffe25cb0000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\verify.dll
+0x00007ffe26830000 - 0x00007ffe26a14000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffe0a350000 - 0x00007ffe0a37c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffe29440000 - 0x00007ffe294c2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffe00000000 - 0x00007ffe00028000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\java.dll
+0x00007ffe1e530000 - 0x00007ffe1e547000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\zip.dll
+0x00007ffe22630000 - 0x00007ffe2263a000 	C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=windows-1252 -Duser.country=IN -Duser.language=en -Duser.variant 
+java_command: com.demo.kafka.springbootkafka.processor.KafkaStreamProcessor
+java_class_path (initial): C:\Users\sagargupta03\Downloads\spring-boot-kafka\spring-boot-kafka\build\classes\java\main;C:\Users\sagargupta03\Downloads\spring-boot-kafka\spring-boot-kafka\build\resources\main;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.7.2\dd8a77a26900a86d9962598cbbd360f6b69bab5e\spring-boot-starter-web-2.7.2.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.apache.kafka\kafka-streams\3.1.1\6ecc0a3857815027e053662d6bf1e765ef63464c\kafka-streams-3.1.1.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework.kafka\spring-kafka\2.8.8\c2f6c7bd7e1f85de627c74e560ac503f3619bf1b\spring-kafka-2.8.8.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.7.2\d51c90fa1f01e7d411d15cb1c2c3eda2f92306c1\spring-boot-starter-json-2.7.2.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\2.7.2\12f0da08b8120adcd137073ad08767f2d60e6cc3\spring-boot-starter-2.7.2.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\2.7.2\1b10b4411aae8809aad46d3693001917468138f5\spring-boot-starter-tomcat-2.7.2.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\5.3.22\519d86b7ac9b8b6bb54739eb4eb73dc13a263b28\spring-webmvc-5.3.22.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\5.3.22\fdab9b8d8df2e6a8fb90f2481c361bcf2c129567\spring-web-5.3.22.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.apache.kafka\kafka-clients\3.1.1\6fb84c57d8c4a87b3fc1e834e2500a36c048afa3\kafka-clients-3.1.1.jar;C:\Users\sagargupta03\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\2.7.2\a88c44d4ec24ca37f51192c2aad3a1ca53f937f5\spring-boot-starter-logging-2.7.2.jar;C:\Users\sagargupta03\.gradle\caches\modu
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 260046848                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4133486592                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\RedHat\java-11-openjdk-11.0.5-2
+PATH=C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\dotnet\;C:\Program Files\RedHat\java-11-openjdk-11.0.5-2\bin;C:\Program Files\nodejs\;C:\apache-maven-3.8.5\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\sagargupta03\AppData\Local\Microsoft\WindowsApps;C:\Users\sagargupta03\AppData\Local\GitHubDesktop\bin;C:\Users\sagargupta03\AppData\Local\Programs\Git\cmd;C:\Users\sagargupta03\AppData\Roaming\npm;C:\do\bin;C:\Users\sagargupta03\.azure-kubectl;C:\Users\sagargupta03\.azure-kubelogin;
+USERNAME=sagargupta03
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1806)
+HyperV virtualization detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, evex, sha, fma
+
+Memory: 4k page, system-wide physical 15761M (450M free)
+TotalPageFile size 33407M (AvailPageFile size 111M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 308M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.5+10-LTS) for windows-amd64 JRE (11.0.5+10-LTS), built on Nov  8 2019 01:41:57 by "" with unknown MS VC++:1916
+
+END.
